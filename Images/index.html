@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="zom.png" type="image/x-icon">
+    <!-- Alpinejs -->
+    <script defer src="https://unpkg.com/alpinejs@3.3.2/dist/cdn.min.js"></script>
+    <title>Zomato-A food ordering app</title>
+</head>
+
+<body class="sm:flex flex-col justify-center flex-wrap">
+    <div class=" w-[1300px] flex justify-center ml-36">
+        <div>
+            <div class="font-sans h-[100%] ">
+                <nav>
+                    <ul class="flex justify-center list-none">
+                        <li class="mr-20"><img src="zomato.avif" alt="" srcset="" width="120px" height="23px"
+                                class="mt-4"></li>
+                        <li class="">
+                            <div
+                                class="bg-transparent w-[600px] h-14 text-start border shadow-lg border-spacing-1 p-4 flex justify-around mt-2 rounded-lg">
+                                <img src="loction.png" alt="" width="12px" height="19px"
+                                    class="mr-1 cursor-pointer"><input type="text" placeholder="Bengaluru"
+                                    class="focus:outline-none">
+                                <select class="outline-none translate-x-[-99px] cursor-pointer">
+                                    <option value="opt1"></option>
+                                    <option value="opt2">Hydrabad</option>
+                                    <option value="opt3">Chennai</option>
+                                </select><span class="mx-2 translate-x-[-99px]">|</span>
+                                <img src="search.png" width="18px" height="19px" alt=""
+                                    class="mr-8 translate-x-[-99px] cursor-pointer">
+                                <input type="text" placeholder="Search for restaurant or dish "
+                                    class="focus:outline-none translate-x-[-122px] w-80 cursor-pointers">
+                            </div>
+                        </li>
+                        <a href="https://www.zomato.com/login" target="_blank" class="ml-[140px] font-light hover:text-red-600 text-lg  mt-4">Log In</a>
+                        <a href="https://www.zomato.com/sign in" target="_blank" class="ml-[50px] font-light hover:text-red-600 text-lg mt-4">Sign In</a>
+                    </ul>
+                </nav>
+                <div class="ml-24">
+                    <p class="mt-8 text-xs font-light font-sans"><span><a href="#"
+                                class="hover:text-red-600">Home</a>&nbsp;/&nbsp;<a href="#"
+                                class="hover:text-red-600">India</a>&nbsp;/&nbsp;<a href="#"
+                                class="hover:text-red-600">Bengaluru Restaurants</a>&nbsp</span></p>
+                </div>
+                <div class="mt-2 ml-20">
+                    <div class="flex">
+                        <div class="h-[80px] w-[7rem] border-b-4 border-red-500 mr-8">
+                            <div class="rounded-[100px] flex w-12 h-8 mt-8 "><img src="delivery.webp " alt="" srcset=""
+                                    width="100%" height="100%" class="rounded-[200px] bg-yellow-200">
+                                <a href="https://www.zomato.com/bangalore/delivery-in-adarsh-palm-retreat?rating_range=4.0-5.0" class="font-sans text-lg   ml-4 hover:text-red-600">Delivery</a>
+                            </div>
+                        </div>
+
+
+                        <div class="rounded-[100px] flex w-12 h-8 mt-8"><img src="dinning.webp" alt="" srcset=""
+                                width="100%" height="100%" class="rounded-[200px] ">
+                            <a href="https://www.zomato.com/bangalore/dine-out-in-adarsh-palm-retreat?rating_range=4.0-5.0" class="font-sans text-lg  ml-4 hover:text-red-600">Dinning</a>
+                        </div>
+                        <div class="rounded-[100px] flex w-16 h-8 mt-8 ml-[6.5rem]"><img src="nightlife.webp" alt=""
+                                srcset="" width="100%" height="100%" class="rounded-[200px] ">
+                            <a href="https://www.zomato.com/bangalore/drinks-nightlife-in-adarsh-palm-retreat?rating_range=4.0-5.0" class="font-sans text-lg  ml-4 hover:text-red-600">Night</a>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <hr class=" w-100% border-b-black">
+
+                <div class="flex font-light ">
+                    <div class="mt-[42px] ml-20"><a
+                            class=" mt-4 rounded-lg border-4 p-3 bg-transparent font-extralight">Filters</a></div>
+                    <div class="mt-[42px] ml-4"><a
+                            class=" mt-4 rounded-lg border-4 p-3 bg-transparent font-extralight">Rating:4.0+</a>
+                    </div>
+                    <div class="mt-[42px] ml-4"><a
+                        href="https://www.zomato.com/bangalore/delivery-in-adarsh-palm-retreat?dishv2_id=56691&meta_filter=100354"
+                            class=" mt-4 rounded-lg border-4 p-3 bg-transparent font-extralight">Pure Veg</a></div>
+                    <div class="mt-[42px] ml-4"><a href= "" class=" mt-4 rounded-lg border-4 p-3 bg-transparent  "><select
+                                name="sel" id="" class="outline-none">
+                                <option value="op1">Cuisines</option>
+                                <option value="op1">dishes</option>
+                            </select></a></div>
+                    <div class="mt-[42px] ml-4"><a class=" mt-4 rounded-lg border-4 p-3 bg-transparent"><select
+                                name="sel" id="" class="outline-none ">
+                                <option value="o1" class="font-extralight">
+                                    More Filters
+                                </option>
+                            </select></a></div>
+                </div>
+                <div class="bg-gray-200 overflow-x-hiddenSS h-[321px]">
+                    <div class="mt-8 ml-20 flex ">
+                        <span class="text-[2rem] font-sans">Inspiration for your first order</span>
+                    </div>
+                    <div class="mt-8 ml-20 flex font-mono">
+                        <a href="https://www.zomato.com/bangalore/restaurants?place_name=Bengaluru&dishv2_id=68987"
+                            target="_blank">
+                            <div><img src="Pizza.webp" alt="" srcset="" width="150px" class="rounded-[200px]">
+                                <p class="text-xl ml-12">Pizza</p>
+                            </div>
+                        </a>
+                        <a href="https://www.zomato.com/bangalore/restaurants?place_name=Bengaluru&dishv2_id=30308"
+                            target="_blank">
+                            <div><img src="Biryani.webp" alt="" srcset="" width="150px" class="rounded-[200px] ml-8">
+                                <p class="text-xl ml-[4.5rem]">Biryani</p>
+                            </div>
+                        </a>
+                        <a href="https://www.zomato.com/bangalore/restaurants?place_name=Bengaluru&dishv2_id=55280"
+                            target="_blank">
+                            <div><img src="Chicken.webp" alt="" srcset="" width="150px" class="rounded-[200px] ml-8">
+                                <p class="text-xl ml-20">Chicken</p>
+                            </div>
+                        </a>
+                        <a href="https://www.zomato.com/bangalore/restaurants?place_name=Bengaluru&dishv2_id=35301"
+                            target="_blank">
+                            <div><img src="Rice.webp" alt="" srcset="" width="150px" class="rounded-[200px] ml-8">
+                                <p class="text-xl ml-24">Rice</p>
+                            </div>
+                        </a>
+                        <a href="https://www.zomato.com/bangalore/restaurants?place_name=Bengaluru&dishv2_id=56691"
+                            target="_blank">
+                            <div><img src="Thali.webp" alt="" srcset="" width="150px" class="rounded-[200px] ml-8">
+                                <p class="text-xl ml-24">Thali</p>
+                            </div>
+                        </a>
+                        <a href="https://www.zomato.com/bangalore/delivery?dishv2_id=10296" target="_blank">
+                            <div><img src="Dosa.webp" alt="" srcset="" width="150px" class="rounded-[200px] ml-8">
+                                <p class="text-xl ml-24">Dosa</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="mt-12 ml-24 flex ">
+                        <span class="text-[2rem] font-sans">Top for Brands You</span>
+                    </div>
+                    <div class="mt-4 ml-20 flex font-mono"><a
+                            href="https://www.zomato.com/bangalore/dominos-pizza-shanti-nagar/order" target="_blank">
+                            <div><img src="Dominos.webp" alt="" srcset="" width="150px" class="rounded-[200px]">
+                                <p class="text-xl ml-4">Domino's</p>
+                            </div>
+                        </a>
+                        <a href="https://www.zomato.com/bangalore/truffles-new-bel-road/order" target="_blank">
+                            <div><img src="Truffles.webp" alt="" srcset="" width="150px" class="rounded-[200px] ml-8">
+                                <p class="text-xl ml-[4rem]">Truffles</p>
+                            </div>
+                        </a>
+                        <a href="https://www.zomato.com/bangalore/empire-restaurant-majestic/order" target="_blank">
+                            <div><img src="Empire.webp" alt="" srcset="" width="150px" class="rounded ml-8">
+                                <p class="text-xl ml-20">Empire
+                                </p>
+                            </div>
+                        </a>
+                        <a href="https://www.zomato.com/bangalore/freshmenu-rajajinagar/order" target="_blank">
+                            <div><img src="freshmenu.webp" alt="" srcset="" width="150px" class="rounded-[200px] ml-8">
+                                <p class="text-xl ml-12">FreshMenu</p>
+                            </div>
+                        </a>
+                        <a href="https://www.zomato.com/bangalore/mcdonalds-malleshwaram/order" target="_blank">
+                            <div><img src="McDonaldo.webp" alt="" srcset="" width="150px" class="rounded-[80px] ml-8">
+                                <p class="text-xl ml-16">McDonald's</p>
+                            </div>
+                        </a>
+                        <a href="https://www.zomato.com/bangalore/kfc-shanti-nagar-bangalore/order " target="_blank">
+                            <div><img src="KFC.avif" alt="" srcset="" width="150px" class="rounded-[100px] ml-8">
+                                <p class="text-xl ml-24">KFC</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="mt-12 ml-24 flex  ">
+                        <span class="text-[2rem] font-sans">Order food online in Bengaluru</span>
+                    </div>
+                    <div class="mt-4 ml-20 h-[320px] w-[1100px] flex justify-around font-mono"><a
+                            href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                            <div class="shadow-lg  hover:scale-110 duration-1000"><img src="royal.avif" alt="" srcset=""
+                                    width="313px" style="height: 254px;" class="rounded-[20px]">
+                                <div class="flex justify-between">
+                                    <p>Kolkata Kathi Rolls </p><span class="text-end">3.9+</span>
+                                </div>
+                                <p>Rolls,Biryani,Chinese,North Ind</p>
+                                <p class="text-center">Rs.100</p>
+
+                            </div>
+                        </a>
+                        <a href=" https://www.zomato.com/bangalore/truffles-new-bel-road/order"></a>
+                        <div class="shadow-lg hover:scale-110 duration-1000"><img src="nandhini.webp" alt="" srcset=""
+                                width="313px" style="height: 254px;" class="rounded-[20px]">
+                            <div class="flex justify-between">
+                                <p>Nandhini Deluxe</p><span class="text-end">3.9+</span>
+                            </div>
+                            <p>Andhra, Biryani, South Indian, </p>
+                            <p class="text-center">Rs.100</p>
+
+                        </div>
+                        </a>
+                        <a href="https://www.zomato.com/bangalore/truffles-new-bel-road/order"></a>
+                        <div class="shadow-lg  hover:scale-110 duration-1000"><img src="Meghana.webp" alt="" srcset=""
+                                width="313px" style="height: 254px;" class="rounded-[20px]">
+                            <div class="flex justify-between">
+                                <p>Call Me Chow </p><span class="text-end">3.9+</span>
+                            </div>
+                            <p>Rolls,Biryani,Chinese,North Ind</p>
+                            <p class="text-center">Rs.100</p>
+
+                        </div>
+                        </a>
+
+
+                    </div>
+
+                    <div>
+                        <div class="mt-12 ml-24 flex  ">
+                            <span class="text-[2rem] font-sans">Today's Deals </span>
+                        </div>
+                        <div class="mt-4 ml-20 h-[320px] w-[1100px] flex justify-around font-mono"><a
+                                href="https://www.zomato.com/bangalore/truffles-new-bel-road/order" target="_blank">
+                                <div class="shadow-lg  hover:scale-110 duration-1000"><img src="Chicken.webp" alt=""
+                                        srcset="" width="313px" style="height: 254px;" class="rounded-[20px]">
+                                    <div class="flex justify-between">
+                                        <p>Kolkata Kathi Rolls </p><span class="text-end">3.9+</span>
+                                    </div>
+                                    <p>Rolls,Biryani,Chinese,North Ind</p>
+                                    <p class="text-center">Rs.100</p>
+
+                                </div>
+                            </a>
+                            <a href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                <div class="shadow-lg hover:scale-110 duration-1000"><img src="sulthan.avif" alt=""
+                                        srcset="" width="313px" style="height: 254px;" class="rounded-[20px]">
+                                    <div class="flex justify-between">
+                                        <p>Nandhini Deluxe</p><span class="text-end">3.9+</span>
+                                    </div>
+                                    <p>Andhra, Biryani, South Indian, </p>
+                                    <p class="text-center">Rs.100</p>
+
+                                </div>
+                            </a>
+                            <a href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                <div class="shadow-lg  hover:scale-110 duration-1000"><img src="Dosa.webp" alt=""
+                                        srcset="" width="313px" style="height: 254px;" class="rounded-[20px]">
+                                    <div class="flex justify-between">
+                                        <p>Call Me Chow </p><span class="text-end">3.9+</span>
+                                    </div>
+                                    <p>Rolls,Biryani,Chinese,North Ind</p>
+                                    <p class="text-center">Rs.100</p>
+
+                                </div>
+                            </a>
+
+
+                        </div>
+
+                        <div>
+                            <div class="mt-12 ml-[6.5rem] flex  ">
+                                <span class="text-[2rem] font-sans">Craziest Deal for you</span>
+                            </div>
+                            <div class="mt-4 ml-20 h-[320px] w-[1100px] flex justify-around font-mono"><a
+                                    href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                    <div class="shadow-lg  hover:scale-110 duration-1000"><img src="ayodhya.avif" alt=""
+                                            srcset="" width="313px" style="height: 254px;" class="rounded-[20px]">
+                                        <div class="flex justify-between">
+                                            <p>Chicken Tandoori</p><span class="text-end">3.9+</span>
+                                        </div>
+                                        <p>Rolls,Biryani,Chinese,North Ind</p>
+                                        <p class="text-center">Rs.100</p>
+
+                                    </div>
+                                </a>
+                                <a href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                    <div class="shadow-lg hover:scale-110 duration-1000"><img src="empirer.avif" alt=""
+                                            srcset="" width="313px" style="height: 254px;" class="rounded-[20px]">
+                                        <div class="flex justify-between">
+                                            <p>Nandhini Deluxe</p><span class="text-end">3.9+</span>
+                                        </div>
+                                        <p>Andhra, Biryani, South Indian, </p>
+                                        <p class="text-center">Rs.100</p>
+
+                                    </div>
+                                </a>
+                                <a href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                    <div class="shadow-lg  hover:scale-110 duration-1000"><img src="Falahaar.webp"
+                                            alt="" srcset="" width="313px" style="height: 254px;"
+                                            class="rounded-[20px]">
+                                        <div class="flex justify-between">
+                                            <p>Call Me Chow </p><span class="text-end">3.9+</span>
+                                        </div>
+                                        <p>Rolls,Biryani,Chinese,North Ind</p>
+                                        <p class="text-center">Rs.100</p>
+
+                                    </div>
+                                </a>
+
+
+                            </div>
+
+                            <div>
+                                <div class="mt-12 ml-[6.5rem]  flex  ">
+                                    <span class="text-[2rem] font-sans">Tasty and Tasty foods for you</span>
+                                </div>
+                                <div class="mt-4 ml-20 h-[320px] w-[1100px] flex justify-around font-mono"><a
+                                        href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                        <div class="shadow-lg  hover:scale-110 duration-1000"><img src="KFC2.avif"
+                                                alt="" srcset="" width="313px" style="height: 254px;"
+                                                class="rounded-[20px]">
+                                            <div class="flex justify-between">
+                                                <p>Kolkata Kathi Rolls </p><span class="text-end">3.9+</span>
+                                            </div>
+                                            <p>Rolls,Biryani,Chinese,North Ind</p>
+                                            <p class="text-center">Rs.100</p>
+
+                                        </div>
+                                    </a>
+                                    <a href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                        <div class="shadow-lg hover:scale-110 duration-1000"><img src="Krishnam.avif"
+                                                alt="" srcset="" width="313px" style="height: 254px;"
+                                                class="rounded-[20px]">
+                                            <div class="flex justify-between">
+                                                <p>Nandhini Deluxe</p><span class="text-end">3.9+</span>
+                                            </div>
+                                            <p>Andhra, Biryani, South Indian, </p>
+                                            <p class="text-center">Rs.100</p>
+
+                                        </div>
+                                    </a>
+                                    <a href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                        <div class="shadow-lg  hover:scale-110 duration-1000"><img
+                                                src="Mc donald 2.avif" alt="" srcset="" width="313px"
+                                                style="height: 254px;" class="rounded-[20px]">
+                                            <div class="flex justify-between">
+                                                <p>Call Me Chow </p><span class="text-end">3.9+</span>
+                                            </div>
+                                            <p>Rolls,Biryani,Chinese,North Ind</p>
+                                            <p class="text-center">Rs.100</p>
+
+                                        </div>
+                                    </a>
+
+
+                                </div>
+                                <div>
+                                    <div class="mt-12 ml-[6.5rem]  flex  ">
+                                        <span class="text-[2rem] font-sans">Only for Today</span>
+                                    </div>
+                                    <div class="mt-4 ml-20 h-[320px] w-[1100px] flex justify-around font-mono"><a
+                                            href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                            <div class="shadow-lg  hover:scale-110 duration-1000"><img
+                                                    src="ayodhya.avif" alt="" srcset="" width="313px"
+                                                    style="height: 254px;" class="rounded-[20px]">
+                                                <div class="flex justify-between">
+                                                    <p>Chicken Tandoori</p><span class="text-end">3.9+</span>
+                                                </div>
+                                                <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                <p class="text-center">Rs.100</p>
+
+                                            </div>
+                                        </a>
+                                        <a href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                            <div class="shadow-lg hover:scale-110 duration-1000"><img src="empirer.avif"
+                                                    alt="" srcset="" width="313px" style="height: 254px;"
+                                                    class="rounded-[20px]">
+                                                <div class="flex justify-between">
+                                                    <p>Nandhini Deluxe</p><span class="text-end">3.9+</span>
+                                                </div>
+                                                <p>Andhra, Biryani, South Indian, </p>
+                                                <p class="text-center">Rs.100</p>
+
+                                            </div>
+                                        </a>
+                                        <a href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                            <div class="shadow-lg  hover:scale-110 duration-1000"><img
+                                                    src="Falahaar.webp" alt="" srcset="" width="313px"
+                                                    style="height: 254px;" class="rounded-[20px]">
+                                                <div class="flex justify-between">
+                                                    <p>Call Me Chow </p><span class="text-end">3.9+</span>
+                                                </div>
+                                                <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                <p class="text-center">Rs.100</p>
+
+                                            </div>
+                                        </a>
+
+
+                                    </div>
+
+                                    <div>
+                                        <div class="mt-12 ml-[6.5rem]  flex  ">
+                                            <span class="text-[2rem] font-sans">A Wonderful Recipes</span>
+                                        </div>
+                                        <div class="mt-4 ml-20 h-[320px] w-[1100px] flex justify-around font-mono"><a
+                                                href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                <div class="shadow-lg  hover:scale-110 duration-1000"><img
+                                                        src="KFC2.avif" alt="" srcset="" width="313px"
+                                                        style="height: 254px;" class="rounded-[20px]">
+                                                    <div class="flex justify-between">
+                                                        <p>Kolkata Kathi Rolls </p><span class="text-end">3.9+</span>
+                                                    </div>
+                                                    <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                    <p class="text-center">Rs.100</p>
+
+                                                </div>
+                                            </a>
+                                            <a href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                <div class="shadow-lg hover:scale-110 duration-1000"><img
+                                                        src="Krishnam.avif" alt="" srcset="" width="313px"
+                                                        style="height: 254px;" class="rounded-[20px]">
+                                                    <div class="flex justify-between">
+                                                        <p>Nandhini Deluxe</p><span class="text-end">3.9+</span>
+                                                    </div>
+                                                    <p>Andhra, Biryani, South Indian, </p>
+                                                    <p class="text-center">Rs.100</p>
+
+                                                </div>
+                                            </a>
+                                            <a href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                <div class="shadow-lg  hover:scale-110 duration-1000"><img
+                                                        src="Mc donald 2.avif" alt="" srcset="" width="313px"
+                                                        style="height: 254px;" class="rounded-[20px]">
+                                                    <div class="flex justify-between">
+                                                        <p>Call Me Chow </p><span class="text-end">3.9+</span>
+                                                    </div>
+                                                    <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                    <p class="text-center">Rs.100</p>
+
+                                                </div>
+                                            </a>
+
+
+                                        </div>
+                                        <div>
+                                            <div class="mt-12 ml-[6.5rem]  flex  ">
+                                                <span class="text-[2rem] font-sans">Taste for Once in your life</span>
+                                            </div>
+                                            <div class="mt-4 ml-20 h-[320px] w-[1100px] flex justify-around font-mono">
+                                                <a href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                    <div class="shadow-lg  hover:scale-110 duration-1000"><img
+                                                            src="ayodhya.avif" alt="" srcset="" width="313px"
+                                                            style="height: 254px;" class="rounded-[20px]">
+                                                        <div class="flex justify-between">
+                                                            <p>Chicken Tandoori</p><span class="text-end">3.9+</span>
+                                                        </div>
+                                                        <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                        <p class="text-center">Rs.100</p>
+
+                                                    </div>
+                                                </a>
+                                                <a href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                    <div class="shadow-lg hover:scale-110 duration-1000"><img
+                                                            src="empirer.avif" alt="" srcset="" width="313px"
+                                                            style="height: 254px;" class="rounded-[20px]">
+                                                        <div class="flex justify-between">
+                                                            <p>Nandhini Deluxe</p><span class="text-end">3.9+</span>
+                                                        </div>
+                                                        <p>Andhra, Biryani, South Indian, </p>
+                                                        <p class="text-center">Rs.100</p>
+
+                                                    </div>
+                                                </a>
+                                                <a href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                    <div class="shadow-lg  hover:scale-110 duration-1000"><img
+                                                            src="Falahaar.webp" alt="" srcset="" width="313px"
+                                                            style="height: 254px;" class="rounded-[20px]">
+                                                        <div class="flex justify-between">
+                                                            <p>Call Me Chow </p><span class="text-end">3.9+</span>
+                                                        </div>
+                                                        <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                        <p class="text-center">Rs.100</p>
+
+                                                    </div>
+                                                </a>
+
+
+                                            </div>
+
+                                            <div>
+                                                <div class="mt-12 ml-[6.5rem]  flex  ">
+                                                    <span class="text-[2rem] font-sans">Quality food</span>
+                                                </div>
+                                                <div
+                                                    class="mt-4 ml-20 h-[320px] w-[1100px] flex justify-around font-mono">
+                                                    <a
+                                                        href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                        <div class="shadow-lg  hover:scale-110 duration-1000"><img
+                                                                src="KFC2.avif" alt="" srcset="" width="313px"
+                                                                style="height: 254px;" class="rounded-[20px]">
+                                                            <div class="flex justify-between">
+                                                                <p>Kolkata Kathi Rolls </p><span
+                                                                    class="text-end">3.9+</span>
+                                                            </div>
+                                                            <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                            <p class="text-center">Rs.100</p>
+
+                                                        </div>
+                                                    </a>
+                                                    <a
+                                                        href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                        <div class="shadow-lg hover:scale-110 duration-1000"><img
+                                                                src="Krishnam.avif" alt="" srcset="" width="313px"
+                                                                style="height: 254px;" class="rounded-[20px]">
+                                                            <div class="flex justify-between">
+                                                                <p>Nandhini Deluxe</p><span class="text-end">3.9+</span>
+                                                            </div>
+                                                            <p>Andhra, Biryani, South Indian, </p>
+                                                            <p class="text-center">Rs.100</p>
+
+                                                        </div>
+                                                    </a>
+                                                    <a
+                                                        href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                        <div class="shadow-lg  hover:scale-110 duration-1000"><img
+                                                                src="Mc donald 2.avif" alt="" srcset="" width="313px"
+                                                                style="height: 254px;" class="rounded-[20px]">
+                                                            <div class="flex justify-between">
+                                                                <p>Call Me Chow </p><span class="text-end">3.9+</span>
+                                                            </div>
+                                                            <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                            <p class="text-center">Rs.100</p>
+
+                                                        </div>
+                                                    </a>
+
+
+                                                </div>
+                                                <div>
+                                                    <div class="mt-12 ml-[6.5rem]  flex  ">
+                                                        <span class="text-[2rem] font-sans">For you</span>
+                                                    </div>
+                                                    <div
+                                                        class="mt-4 ml-20 h-[320px] w-[1100px] flex justify-around font-mono">
+                                                        <a
+                                                            href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                            <div class="shadow-lg  hover:scale-110 duration-1000"><img
+                                                                    src="ayodhya.avif" alt="" srcset="" width="313px"
+                                                                    style="height: 254px;" class="rounded-[20px]">
+                                                                <div class="flex justify-between">
+                                                                    <p>Chicken Tandoori</p><span
+                                                                        class="text-end">3.9+</span>
+                                                                </div>
+                                                                <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                                <p class="text-center">Rs.100</p>
+
+                                                            </div>
+                                                        </a>
+                                                        <a
+                                                            href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                            <div class="shadow-lg hover:scale-110 duration-1000"><img
+                                                                    src="empirer.avif" alt="" srcset="" width="313px"
+                                                                    style="height: 254px;" class="rounded-[20px]">
+                                                                <div class="flex justify-between">
+                                                                    <p>Nandhini Deluxe</p><span
+                                                                        class="text-end">3.9+</span>
+                                                                </div>
+                                                                <p>Andhra, Biryani, South Indian, </p>
+                                                                <p class="text-center">Rs.100</p>
+
+                                                            </div>
+                                                        </a>
+                                                        <a
+                                                            href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                            <div class="shadow-lg  hover:scale-110 duration-1000"><img
+                                                                    src="Falahaar.webp" alt="" srcset="" width="313px"
+                                                                    style="height: 254px;" class="rounded-[20px]">
+                                                                <div class="flex justify-between">
+                                                                    <p>Call Me Chow </p><span
+                                                                        class="text-end">3.9+</span>
+                                                                </div>
+                                                                <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                                <p class="text-center">Rs.100</p>
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="mt-12 ml-[6.5rem]  flex  ">
+                                                            <span class="text-[2rem] font-sans">Current Time Everyone's
+                                                                Favorite</span>
+                                                        </div>
+                                                        <div
+                                                            class="mt-4 ml-20 h-[320px] w-[1100px] flex justify-around font-mono">
+                                                            <a
+                                                                href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                                <div class="shadow-lg  hover:scale-110 duration-1000">
+                                                                    <img src="KFC2.avif" alt="" srcset="" width="313px"
+                                                                        style="height: 254px;" class="rounded-[20px]">
+                                                                    <div class="flex justify-between">
+                                                                        <p>Kolkata Kathi Rolls </p><span
+                                                                            class="text-end">3.9+</span>
+                                                                    </div>
+                                                                    <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                                    <p class="text-center">Rs.100</p>
+
+                                                                </div>
+                                                            </a>
+                                                            <a
+                                                                href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                                <div class="shadow-lg hover:scale-110 duration-1000">
+                                                                    <img src="Krishnam.avif" alt="" srcset=""
+                                                                        width="313px" style="height: 254px;"
+                                                                        class="rounded-[20px]">
+                                                                    <div class="flex justify-between">
+                                                                        <p>Nandhini Deluxe</p><span
+                                                                            class="text-end">3.9+</span>
+                                                                    </div>
+                                                                    <p>Andhra, Biryani, South Indian, </p>
+                                                                    <p class="text-center">Rs.100</p>
+
+                                                                </div>
+                                                            </a>
+                                                            <a
+                                                                href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                                <div class="shadow-lg  hover:scale-110 duration-1000">
+                                                                    <img src="Mc donald 2.avif" alt="" srcset=""
+                                                                        width="313px" style="height: 254px;"
+                                                                        class="rounded-[20px]">
+                                                                    <div class="flex justify-between">
+                                                                        <p>Call Me Chow </p><span
+                                                                            class="text-end">3.9+</span>
+                                                                    </div>
+                                                                    <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                                    <p class="text-center">Rs.100</p>
+
+                                                                </div>
+                                                            </a>
+
+
+                                                        </div>
+                                                        <div>
+                                                            <div class="mt-12 ml-[6.5rem]  flex  ">
+                                                                <span class="text-[2rem] font-sans">Bengaluru
+                                                                    Taste</span>
+                                                            </div>
+                                                            <div
+                                                                class="mt-4 ml-20 h-[320px] w-[1100px] flex justify-around font-mono">
+                                                                <a
+                                                                    href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                                    <div
+                                                                        class="shadow-lg  hover:scale-110 duration-1000">
+                                                                        <img src="ayodhya.avif" alt="" srcset=""
+                                                                            width="313px" style="height: 254px;"
+                                                                            class="rounded-[20px]">
+                                                                        <div class="flex justify-between">
+                                                                            <p>Chicken Tandoori</p><span
+                                                                                class="text-end">3.9+</span>
+                                                                        </div>
+                                                                        <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                                        <p class="text-center">Rs.100</p>
+
+                                                                    </div>
+                                                                </a>
+                                                                <a
+                                                                    href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                                    <div
+                                                                        class="shadow-lg hover:scale-110 duration-1000">
+                                                                        <img src="empirer.avif" alt="" srcset=""
+                                                                            width="313px" style="height: 254px;"
+                                                                            class="rounded-[20px]">
+                                                                        <div class="flex justify-between">
+                                                                            <p>Nandhini Deluxe</p><span
+                                                                                class="text-end">3.9+</span>
+                                                                        </div>
+                                                                        <p>Andhra, Biryani, South Indian, </p>
+                                                                        <p class="text-center">Rs.100</p>
+
+                                                                    </div>
+                                                                </a>
+                                                                <a
+                                                                    href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                                    <div
+                                                                        class="shadow-lg  hover:scale-110 duration-1000">
+                                                                        <img src="Falahaar.webp" alt="" srcset=""
+                                                                            width="313px" style="height: 254px;"
+                                                                            class="rounded-[20px]">
+                                                                        <div class="flex justify-between">
+                                                                            <p>Call Me Chow </p><span
+                                                                                class="text-end">3.9+</span>
+                                                                        </div>
+                                                                        <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                                        <p class="text-center">Rs.100</p>
+
+                                                                    </div>
+                                                                </a>
+
+
+                                                            </div>
+
+                                                            <div>
+                                                                <div class="mt-12 ml-[6.5rem]  flex  ">
+                                                                    <span class="text-[2rem] font-sans">Feel this
+                                                                        food</span>
+                                                                </div>
+                                                                <div
+                                                                    class="mt-4 ml-20 h-[320px] w-[1100px] flex justify-around font-mono">
+                                                                    <a
+                                                                        href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                                        <div
+                                                                            class="shadow-lg  hover:scale-110 duration-1000">
+                                                                            <img src="KFC2.avif" alt="" srcset=""
+                                                                                width="313px" style="height: 254px;"
+                                                                                class="rounded-[20px]">
+                                                                            <div class="flex justify-between">
+                                                                                <p>Kolkata Kathi Rolls </p><span
+                                                                                    class="text-end">3.9+</span>
+                                                                            </div>
+                                                                            <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                                            <p class="text-center">Rs.100</p>
+
+                                                                        </div>
+                                                                    </a>
+                                                                    <a
+                                                                        href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                                        <div
+                                                                            class="shadow-lg hover:scale-110 duration-1000">
+                                                                            <img src="Krishnam.avif" alt="" srcset=""
+                                                                                width="313px" style="height: 254px;"
+                                                                                class="rounded-[20px]">
+                                                                            <div class="flex justify-between">
+                                                                                <p>Nandhini Deluxe</p><span
+                                                                                    class="text-end">3.9+</span>
+                                                                            </div>
+                                                                            <p>Andhra, Biryani, South Indian, </p>
+                                                                            <p class="text-center">Rs.100</p>
+
+                                                                        </div>
+                                                                    </a>
+                                                                    <a
+                                                                        href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                                        <div
+                                                                            class="shadow-lg  hover:scale-110 duration-1000">
+                                                                            <img src="Mc donald 2.avif" alt="" srcset=""
+                                                                                width="313px" style="height: 254px;"
+                                                                                class="rounded-[20px]">
+                                                                            <div class="flex justify-between">
+                                                                                <p>Call Me Chow </p><span
+                                                                                    class="text-end">3.9+</span>
+                                                                            </div>
+                                                                            <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                                            <p class="text-center">Rs.100</p>
+
+                                                                        </div>
+                                                                    </a>
+
+
+                                                                </div>
+                                                                <div>
+                                                                    <div class="mt-12 ml-[6.5rem]  flex  ">
+                                                                        <span class="text-[2rem] font-sans">Improve your
+                                                                            Taste</span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="mt-4 ml-20 h-[320px] w-[1100px] flex justify-around font-mono">
+                                                                        <a
+                                                                            href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                                            <div
+                                                                                class="shadow-lg  hover:scale-110 duration-1000">
+                                                                                <img src="ayodhya.avif" alt="" srcset=""
+                                                                                    width="313px" style="height: 254px;"
+                                                                                    class="rounded-[20px]">
+                                                                                <div class="flex justify-between">
+                                                                                    <p>Chicken Tandoori</p><span
+                                                                                        class="text-end">3.9+</span>
+                                                                                </div>
+                                                                                <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                                                <p class="text-center">Rs.100</p>
+
+                                                                            </div>
+                                                                        </a>
+                                                                        <a
+                                                                            href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                                            <div
+                                                                                class="shadow-lg hover:scale-110 duration-1000">
+                                                                                <img src="empirer.avif"  alt="" srcset=""
+                                                                                    width="313px" style="height: 254px;"
+                                                                                    class="rounded-[20px]" t>
+                                                                                <div class="flex justify-between">
+                                                                                    <p>Nandhini Deluxe</p><span
+                                                                                        class="text-end">3.9+</span>
+                                                                                </div>
+                                                                                <p>Andhra, Biryani, South Indian, </p>
+                                                                                <p class="text-center">Rs.100</p>
+
+                                                                            </div>
+                                                                        </a>
+                                                                        <a
+                                                                            href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                                            <div
+                                                                                class="shadow-lg  hover:scale-110 duration-1000 ">
+                                                                                <img src="Falahaar.webp" alt=""
+                                                                                    srcset="" width="313px"
+                                                                                    style="height: 254px;"
+                                                                                    class="rounded-[20px] " tar>
+                                                                                <div class="flex justify-between">
+                                                                                    <p>Call Me Chow </p><span
+                                                                                        class="text-end">3.9+</span>
+                                                                                </div>
+                                                                                <p>Rolls,Biryani,Chinese,North Ind</p>
+                                                                                <p class="text-center">Rs.100</p>
+
+                                                                            </div>
+                                                                        </a>
+
+
+                                                                    </div>
+
+                                                                    <div>
+                                                                        <div class="mt-12 ml-[6.5rem]  flex  ">
+                                                                            <span
+                                                                                class="text-[2rem] font-sans">Favorites
+                                                                                of Everyone</span>
+                                                                        </div>
+                                                                        <div
+                                                                            class="mt-4 ml-20 h-[320px] w-[1100px] flex justify-around font-mono">
+                                                                            <a
+                                                                                href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                                                <div
+                                                                                    class="shadow-lg  hover:scale-110 duration-1000">
+                                                                                    <img src="KFC2.avif" alt=""
+                                                                                        srcset="" width="313px"
+                                                                                        style="height: 254px;"
+                                                                                        class="rounded-[20px]">
+                                                                                    <div class="flex justify-between">
+                                                                                        <p>Kolkata Kathi Rolls </p><span
+                                                                                            class="text-end">3.9+</span>
+                                                                                    </div>
+                                                                                    <p>Rolls,Biryani,Chinese,North Ind
+                                                                                    </p>
+                                                                                    <p class="text-center">Rs.100</p>
+
+                                                                                </div>
+                                                                            </a>
+                                                                            <a
+                                                                                href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                                                <div
+                                                                                    class="shadow-lg hover:scale-110 duration-1000">
+                                                                                    <img src="Krishnam.avif" alt=""
+                                                                                        srcset="" width="313px"
+                                                                                        style="height: 254px;"
+                                                                                        class="rounded-[20px]">
+                                                                                    <div class="flex justify-between">
+                                                                                        <p>Nandhini Deluxe</p><span
+                                                                                            class="text-end">3.9+</span>
+                                                                                    </div>
+                                                                                    <p>Andhra, Biryani, South Indian,
+                                                                                    </p>
+                                                                                    <p class="text-center">Rs.100</p>
+
+                                                                                </div>
+                                                                            </a>
+                                                                            <a
+                                                                                href="https://www.zomato.com/bangalore/truffles-new-bel-road/order">
+                                                                                <div
+                                                                                    class="shadow-lg  hover:scale-110 duration-1000">
+                                                                                    <img src="Mc donald 2.avif" alt=""
+                                                                                        srcset="" width="313px"
+                                                                                        style="height: 254px;"
+                                                                                        class="rounded-[20px]">
+                                                                                    <div class="flex justify-between">
+                                                                                        <p>Call Me Chow </p><span
+                                                                                            class="text-end">3.9+</span>
+                                                                                    </div>
+                                                                                    <p>Rolls,Biryani,Chinese,North Ind
+                                                                                    </p>
+                                                                                    <p class="text-center">Rs.100</p>
+
+                                                                                </div>
+                                                                            </a>
+
+
+                                                                        </div>
+                                                                        <div class="mt-12 ml-[6.5rem]  flex  ">
+                                                                            <span class="text-[2rem] font-mono">Explore
+                                                                                options near me</span>
+                                                                        </div>
+
+                                                                        <div class=" mt-4 ml-20 w-full h-screen px-4">
+
+                                                                            <div x-data="accordion"
+                                                                                class="w-full max-w-[1064px] space-y-4">
+                                                                                <!-- Accordion 1 -->
+                                                                                <div
+                                                                                    class="w-full bg-white  rounded-md">
+                                                                                    <!-- Head -->
+                                                                                    <div @click="selected != 1 ? selected = 1 : selected =null"
+                                                                                        class="flex justify-between items-center px-2">
+                                                                                        <h1
+                                                                                            class="font-medium text-gray-800 py-2 font-sans">
+                                                                                            Popular cuisines near me
+                                                                                        </h1>
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                            x-bind:class="selected == 1? 'transform rotate-180':''"
+                                                                                            class="h-5 w-5 transition-all duration-300"
+                                                                                            fill="none"
+                                                                                            viewBox="0 0 24 24"
+                                                                                            stroke="currentColor">
+                                                                                            <path stroke-linecap="round"
+                                                                                                stroke-linejoin="round"
+                                                                                                stroke-width="2"
+                                                                                                d="M19 9l-7 7-7-7" />
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                    <!-- Content -->
+                                                                                    <div class="max-h-0 overflow-hidden transition-all duration-300"
+                                                                                        x-ref="tab1"
+                                                                                        :style="selected == 1 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                                                                                        <p class="p-2 text-justify">
+                                                                                        <ul>
+                                                                                            <li></li> Beverages food
+                                                                                            near meBiryani food near
+                                                                                            meBurger food near meChinese
+                                                                                            food near meContinental food
+                                                                                            near meDesserts food near
+                                                                                            meIce Cream food near
+                                                                                            meItalian food near meJuices
+                                                                                            food near meKebab food near
+                                                                                            meMughlai food near meNorth
+                                                                                            Indian food near mePizza
+                                                                                            food near meRolls food near
+                                                                                            meSandwich food near
+                                                                                            meSeafood food near meShake
+                                                                                            food near meSichuan food
+                                                                                            near meSouth Indian food
+                                                                                            near meStreet food near me
+                                                                                        </ul>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div x-data="accordion"
+                                                                                    class="w-full max-w-[1064px] space-y-4">
+                                                                                    <!-- Accordion 1 -->
+                                                                                    <div
+                                                                                        class="w-full bg-white  rounded-md">
+                                                                                        <!-- Head -->
+                                                                                        <div @click="selected != 2 ? selected = 2 : selected =null"
+                                                                                            class="flex justify-between items-center px-2">
+                                                                                            <h1
+                                                                                                class="font-medium text-gray-800 py-2 font-sans">
+                                                                                                Popular restaurant types
+                                                                                                near me</h1>
+                                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                                x-bind:class="selected == 1? 'transform rotate-180':''"
+                                                                                                class="h-5 w-5 transition-all duration-300"
+                                                                                                fill="none"
+                                                                                                viewBox="0 0 24 24"
+                                                                                                stroke="currentColor">
+                                                                                                <path
+                                                                                                    stroke-linecap="round"
+                                                                                                    stroke-linejoin="round"
+                                                                                                    stroke-width="2"
+                                                                                                    d="M19 9l-7 7-7-7" />
+                                                                                            </svg>
+                                                                                        </div>
+                                                                                        <!-- Content -->
+                                                                                        <div class="max-h-0 overflow-hidden transition-all duration-300"
+                                                                                            x-ref="tab1"
+                                                                                            :style="selected == 2 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                                                                                            <p
+                                                                                                class="p-2 text-justify font-sans">
+                                                                                                Bakeries near meBars
+                                                                                                near meBeverage Shops
+                                                                                                near meBhojanalya near
+                                                                                                meCafés near meCasual
+                                                                                                Dining near meClubs near
+                                                                                                meCocktail Bars near
+                                                                                                meConfectioneries near
+                                                                                                meDessert Parlors near
+                                                                                                meDhabas near meFine
+                                                                                                Dining near meFood
+                                                                                                Courts near meFood
+                                                                                                Trucks near meIrani
+                                                                                                Cafes near meKiosks near
+                                                                                                meLounges near
+                                                                                                meMicrobreweries near
+                                                                                                mePaan Shop near mePubs
+                                                                                                near meQuick Bites near
+                                                                                                meSweet Shops near me.
+                                                                                            </p>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div x-data="accordion"
+                                                                                        class="w-full max-w-[1064px] space-y-4">
+                                                                                        <!-- Accordion 1 -->
+                                                                                        <div
+                                                                                            class="w-full bg-white  rounded-md">
+                                                                                            <!-- Head -->
+                                                                                            <div @click="selected != 3 ? selected = 3 : selected =null"
+                                                                                                class="flex justify-between items-center px-2">
+                                                                                                <h1
+                                                                                                    class="font-medium text-gray-800 py-2 font-sans">
+                                                                                                    Top Restaurant
+                                                                                                    Chains</h1>
+                                                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                                    x-bind:class="selected == 1? 'transform rotate-180':''"
+                                                                                                    class="h-5 w-5 transition-all duration-300"
+                                                                                                    fill="none"
+                                                                                                    viewBox="0 0 24 24"
+                                                                                                    stroke="currentColor">
+                                                                                                    <path
+                                                                                                        stroke-linecap="round"
+                                                                                                        stroke-linejoin="round"
+                                                                                                        stroke-width="2"
+                                                                                                        d="M19 9l-7 7-7-7" />
+                                                                                                </svg>
+                                                                                            </div>
+                                                                                            <!-- Content -->
+                                                                                            <div class="max-h-0 overflow-hidden transition-all duration-300"
+                                                                                                x-ref="tab1"
+                                                                                                :style="selected == 3 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                                                                                                <p
+                                                                                                    class="p-2 text-justify">
+                                                                                                    Biryani
+                                                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                                    BluesBurger
+                                                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KingDomino's
+                                                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KFC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Krispy
+                                                                                                    Kreme</p>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                        <div x-data="accordion"
+                                                                                            class="w-full max-w-[1064px] space-y-4">
+                                                                                            <!-- Accordion 1 -->
+                                                                                            <div
+                                                                                                class="w-full bg-white  rounded-md">
+                                                                                                <!-- Head -->
+                                                                                                <div @click="selected != 4 ? selected = 4 : selected =null"
+                                                                                                    class="flex justify-between items-center px-2">
+                                                                                                    <h1
+                                                                                                        class="font-medium text-gray-800 py-2 font-sans">
+                                                                                                        Cities We
+                                                                                                        Deliver To</h1>
+                                                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                                        x-bind:class="selected == 1? 'transform rotate-180':''"
+                                                                                                        class="h-5 w-5 transition-all duration-300"
+                                                                                                        fill="none"
+                                                                                                        viewBox="0 0 24 24"
+                                                                                                        stroke="currentColor">
+                                                                                                        <path
+                                                                                                            stroke-linecap="round"
+                                                                                                            stroke-linejoin="round"
+                                                                                                            stroke-width="2"
+                                                                                                            d="M19 9l-7 7-7-7" />
+                                                                                                    </svg>
+                                                                                                </div>
+                                                                                                <!-- Content -->
+                                                                                                <div class="max-h-0 overflow-hidden transition-all duration-300"
+                                                                                                    x-ref="tab1"
+                                                                                                    :style="selected == 4 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                                                                                                    <p
+                                                                                                        class="p-2 text-justify">
+                                                                                                    <div
+                                                                                                        class="sc-ekulBa cGbDKx">
+                                                                                                        <a href="https://www.zomato.com/ncr/"
+                                                                                                            class="sc-dznXNo dwdYpQ">Delhi
+                                                                                                            NCR</a><br><a
+                                                                                                            href="https://www.zomato.com/kolkata/"
+                                                                                                            class="sc-dznXNo dwdYpQ">Kolkata</a><br><a
+                                                                                                            href="https://www.zomato.com/mumbai/"
+                                                                                                            class="sc-dznXNo dwdYpQ">Mumbai</a><br><a
+                                                                                                            href="https://www.zomato.com/bangalore/"
+                                                                                                            class="sc-dznXNo dwdYpQ">Bengaluru</a><br><a
+                                                                                                            href="https://www.zomato.com/pune/"
+                                                                                                            class="sc-dznXNo dwdYpQ">Pune</a><br><a
+                                                                                                            href="https://www.zomato.com/hyderabad/"
+                                                                                                            class="sc-dznXNo dwdYpQ">Hyderabad</a><br><a
+                                                                                                            href="https://www.zomato.com/chennai/"
+                                                                                                            class="sc-dznXNo dwdYpQ">Chennai</a><br><a
+                                                                                                            href="https://www.zomato.com/lucknow/"
+                                                                                                            class="sc-dznXNo dwdYpQ">Lucknow</a><a
+                                                                                                            href="https://www.zomato.com/kochi/"
+                                                                                                            class="sc-dznXNo dwdYpQ">Kochi</a><br><a
+                                                                                                            href="https://www.zomato.com/jaipur/"
+                                                                                                            class="sc-dznXNo dwdYpQ">Jaipur</a><br>
+                                                                                                        <div
+                                                                                                            class="sc-ciodno egBSot">
+                                                                                                            <a href="https://www.zomato.com/delivery-cities"
+                                                                                                                class="sc-gGCbJM flsyGO">See
+                                                                                                                more</a>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+
+
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="w-[1064px] flex justify-between">
+                                                                                            <img src="zomato.avif"
+                                                                                                alt="" srcset=""
+                                                                                                width="140px"
+                                                                                                height="23px"
+                                                                                                class="mt-32">
+                                                                                            <div>
+                                                                                                <span><select name=""
+                                                                                                        id=""
+                                                                                                        class="mt-32 border border-black rounded-md p-2 mr-8 font-sans">
+                                                                                                        <option
+                                                                                                            value="">
+                                                                                                            India
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="">
+                                                                                                            Australia
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="">
+                                                                                                            Pakistan
+                                                                                                        </option>
+                                                                                                    </select></span>
+                                                                                                <span><select name=""
+                                                                                                        id=""
+                                                                                                        class="mt-32 border border-black rounded-md p-2 font-sans">
+                                                                                                        <option
+                                                                                                            value="">
+                                                                                                            English
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="">
+                                                                                                            Hindi
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="">
+                                                                                                            Telugu
+                                                                                                        </option>
+                                                                                                    </select></span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="flex justify-between">
+                                                                                        <div>
+                                                                                            <ul class="font-sans">
+                                                                                                <li
+                                                                                                    class="font-mono font-bold">
+                                                                                                    ABOUT ZOMATO</li>
+                                                                                                <li class="mt-4">Who We
+                                                                                                    Are</li>
+
+                                                                                                <li>Blog</li>
+
+                                                                                                <li>Work With Us</li>
+
+                                                                                                <li>Investor Relations
+                                                                                                </li>
+
+                                                                                                <li>Report Fraud</li>
+
+                                                                                                <li>Contact Us</li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <ul
+                                                                                                class="list-none font-sans">
+                                                                                                <li
+                                                                                                    class="font-mono font-bold">
+                                                                                                    ZOMAVERSE</li>
+                                                                                                <li class="mt-4"> Zomato
+                                                                                                </li>
+
+                                                                                                <li> Blinkit</li>
+
+                                                                                                <li> Feeding India</li>
+
+                                                                                                <li> Hyperpure</li>
+
+                                                                                                <li> Zomaland</li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <ul class="font-sans">
+                                                                                                <li
+                                                                                                    class="font-mono font-bold">
+                                                                                                    FOR RESTAURANTS</li>
+                                                                                                <li class="mt-4">Partner
+                                                                                                    With Us</li>
+
+                                                                                                <li>Apps For You</li>
+
+                                                                                                <li class="mt-8 font-mono font-bold">FOR ENTERPRISES</li>
+                                                                                                <li class="mt-4">Zomato
+                                                                                                    For Work</li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <ul class="font-sans">
+                                                                                                <li
+                                                                                                    class="font-mono font-bold">
+                                                                                                    LEARN MORE</li>
+                                                                                                <li class="mt-4">
+                                                                                                    Privacy</li>
+
+                                                                                                <li>Security</li>
+                                
+
+                                                                                                <li>Terms</li>
+
+                                                                                                <li> Sitemap</li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <ul class="font-sans">
+                                                                                                <li
+                                                                                                    class="font-mono font-bold">
+                                                                                                    Social Medial</li>
+                                                                                                <li
+                                                                                                    class="flex justify-between mt-4">
+                                                                                                    <a
+                                                                                                        href="https://in.linkedin.com/company/zomato"><span><img
+                                                                                                                src="ll.jpg"
+                                                                                                                alt=""
+                                                                                                                width="23px"
+                                                                                                                height="23px"></span></a>
+                                                                                                    <a
+                                                                                                        href="https://twitter.com/zomato">
+                                                                                                        <span><img
+                                                                                                                src="tw.jpg"
+                                                                                                                alt=""
+                                                                                                                width="23px"
+                                                                                                                height="23px"
+                                                                                                                class="ml-2"></span></a>
+                                                                                                    <a
+                                                                                                        href="https://www.instagram.com/zomato/"><span><img
+                                                                                                                src="insta.jpg"
+                                                                                                                alt=""
+                                                                                                                width="23px"
+                                                                                                                height="23px"></span></a>
+                                                                                                    <a
+                                                                                                        href="https://www.facebook.com/zomato/"><span><img
+                                                                                                                src="fb.jpg"
+                                                                                                                alt=""
+                                                                                                                width="23px"
+                                                                                                                height="23px"></span></a>
+                                                                                                    <a
+                                                                                                        href="https://www.youtube.com/zomato"><span><img
+                                                                                                                src="yt.jpg"
+                                                                                                                alt=""
+                                                                                                                width="23px"
+                                                                                                                height="23px"></span></a>
+                                                                                                </li>
+                                                                                                <a
+                                                                                                    href="https://apps.apple.com/in/app/zomato-food-restaurant-finder/id434613896?_branch_match_id=1158404944054845854&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT8pL1ssp0U%2FJL8%2FLyU9M0a3Kz00sydfNzC8GAFKYbuoiAAAA">
+                                                                                                    <li><span><img
+                                                                                                                src="app store.webp"
+                                                                                                                alt=""
+                                                                                                                width="160px"
+                                                                                                                height="60px"
+                                                                                                                class="mt-8"></span>
+                                                                                                </a></li>
+                                                                                                <a
+                                                                                                    href="https://play.google.com/store/apps/details?id=com.application.zomato&_branch_match_id=1158404944054845854&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT8pL1ssp0U%2FJL8%2FLyU9M0a3STcxLKcrPTAEABp6kzyEAAAA%3D">
+                                                                                                    <li><span><img
+                                                                                                                src="google play.webp"
+                                                                                                                alt=""
+                                                                                                                width="160px"
+                                                                                                                height="60px"
+                                                                                                                class="mt-8"></span>
+                                                                                                </a></li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <hr class="border-1 border-black mt-4">
+
+                                                                            <p class="mt-8 class=" font-sans"">By
+                                                                                continuing past this page, you agree to
+                                                                                our Terms of Service, Cookie Policy,
+                                                                                Privacy Policy and Content Policies. All
+                                                                                trademarks are properties of their
+                                                                                respective owners. 2008-2023 © Zomato™
+                                                                                Ltd. All rights reserved.</p>
+                                                                        </div>
+
+                                                                    </div>
+
+
+                                                                </div>
+
+
+</body>
+<script>
+    function accordion() {
+        return {
+            selected: null
+        }
+    }
+</script>
+
+</html>
